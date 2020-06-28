@@ -2,13 +2,14 @@ const express = require('express')
 const router = express.Router()
 const johns = require('../models/johnsupholstery.js')
 const sendMail = require('../email/email.js')
+require('dotenv').config();
 
 router.post('/', async (req, res) => {
         const createdjohns = await johns.create(req.body)
         res.status(200).json(createdjohns)
         console.log(createdjohns)
 
-        sendMail(createdjohns.email, createdjohns.firstName, createdjohns.lastName, createdjohns.phoneNumber, createdjohns.message, 
+        sendMail(createdjohns.email, createdjohns.fullName, createdjohns.phoneNumber, createdjohns.message, 
             function(err, data) {
             if (err){
                 res.status(400).json(error)

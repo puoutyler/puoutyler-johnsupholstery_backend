@@ -3,6 +3,7 @@ const express = require('express')
 const app = express()
 const mongoose = require('mongoose')
 const cors = require('cors')
+require('dotenv').config();
 
 app.get('/', (req, res) => {
     res.send('Hello World')
