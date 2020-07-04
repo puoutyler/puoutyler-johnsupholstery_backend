@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 const PORT = process.env.PORT || 8000
 const johnsController = require('./controllers/johnsupholstery.js')
 const db = mongoose.connection
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/johnsupholstery'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://heroku_q0vh3fwh:t6hln4ee7c9q9ic41p51msj9na@ds161345.mlab.com:61345/heroku_q0vh3fwh'
 const whitelist = ['http://localhost:1985']
 const corsOptions = {
     origin: function (origin, callback){
