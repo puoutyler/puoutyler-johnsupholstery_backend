@@ -24,7 +24,7 @@ const corsOptions = {
         }
     }
 }
-
+//
 
 //DATABASE CONNECT
 mongoose.connect(MONGODB_URI, {
